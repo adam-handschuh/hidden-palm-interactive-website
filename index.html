@@ -37,7 +37,7 @@
         <section class="info_page" id="home_page">
             <div class="content">
                 <h1>Home</h1>
-                <p>Welcome to the official <i>Hidden Palm Interactive</i> website. Feel free to browse through the different tabs above or check out this page for updates on developement progress and general activity.</p>
+                <p>Welcome to the official <i>Hidden Palm Interactive</i> website. <br>Feel free to browse through the different tabs above or check out<br> this page for updates on developement progress and general activity.</p>
                 <br><br><br>
                 <div class="blog_container" style="text-align: center;">
                     <h2>Blog</h2>
@@ -49,12 +49,14 @@
         <!-- Games -->
         <section class="info_page" id="games_page">
             <div class="games_panel" id="Vorago">
-                <div class="game_gallery">                
-                    <video class="game_teaser" id="video_trailer" controls>
-                        <source src="images/vorago_trailer.mp4" type="video/mp4">
-                    </video>
-                    <img class="game_teaser" id="screenshot" src="images/screenshot_1.jpg">
-                    <span id="fade_box"></span>
+                <div id="game_gallery_container">
+                    <div class="game_gallery">
+                        <video class="game_teaser" id="video_trailer" controls>
+                            <source src="images/vorago_trailer.mp4" type="video/mp4">
+                        </video>
+                        <img class="game_teaser" id="screenshot" src="images/screenshot_1.jpg">
+                        <span id="fade_box"></span>
+                    </div>
                     <div class="selector">
                         <!-- Selector Bar parts -->
                         <div class="selector_underlay" id="selector_underlay"></div>
@@ -68,24 +70,22 @@
                     </div>
                 </div>
                 <br>
-                <div class="game_description">
-                    <div class="content">
-                        <h1>VORAGO</h1>
-                        <h4 style="color: gray;">July 2024</h4>
-                        <h3>Gameplay</h3>
-                        <p>Vorago is a challenging puzzle-horror-adventure game set in space where you will interchange between flying your shuttle across the void and creeping along the narrow hallways of space stations, as you go from door to door, finding clues in your environment and within notes left by missing inhabitants. You'll need to survive a small collection of distinct entities in unique ways as you fight to survive aboard the desolate stations.</p>
-                        <h3>Story</h3>
-                        <p>You play as AL-1, an android asigned to a research station deep in the "Oracle Fields"; a distant, obscure pocket in the void of space. The mysterious "Time Event" has occured and all crew have disappeared, leaving behind them only a faint trail of existence. What happened? It's up to you to search for answers.</p>
-                        <br>
-                        <a class="purchase_button" id="steam" href="https://store.steampowered.com/app/3044970/Vorago/">Buy on <b>STEAM</b> <img src="images/steam_logo.png" width="20px" height="20px" style="margin-bottom: -3px;"> | €4.99</a>
-                        <a class="purchase_button" id="itch" href="https://hidden-palm-interactive.itch.io/vorago">Buy on <b>ITCH.IO</b> <img src="images/itch_logo.webp" width="20px" height="20px" style="margin-bottom: -3px;"> | €4.99</a>
-                    </div>
+                <div class="game_desc_container">
+                    <h1>VORAGO</h1>
+                    <h4 style="color: gray;">July 2024</h4>
+                    <h3>Gameplay</h3>
+                    <p>Vorago is a challenging puzzle-horror-adventure game set in space where you will interchange between flying your shuttle across the void and creeping along the narrow hallways of space stations, as you go from door to door, finding clues in your environment and within notes left by missing inhabitants. You'll need to survive a small collection of distinct entities in unique ways as you fight to survive aboard the desolate stations.</p>
+                    <h3>Story</h3>
+                    <p>You play as AL-1, an android asigned to a research station deep in the "Oracle Fields"; a distant, obscure pocket in the void of space. The mysterious "Time Event" has occured and all crew have disappeared, leaving behind them only a faint trail of existence. What happened? It's up to you to search for answers.</p>
+                    <br>
+                    <a class="purchase_button" id="steam" href="https://store.steampowered.com/app/3044970/Vorago/">Buy on <b>STEAM</b> <img src="images/steam_logo.png" width="20px" height="20px" style="margin-bottom: -3px;"> | €4.99</a>
+                    <a class="purchase_button" id="itch" href="https://hidden-palm-interactive.itch.io/vorago">Buy on <b>ITCH.IO</b> <img src="images/itch_logo.webp" width="20px" height="20px" style="margin-bottom: -3px;"> | €4.99</a>
                 </div>
             </div>
         </section>
         <!-- Engine -->
         <section class="info_page" id="engine_page">
-            <div class="content">
+            <div id="engine_content_container">
                 <h1><i><b>Bare Bones</b></i> engine</h1>
                 <h3>Overview</h3>
                 <p>The <i>Bare Bones</i> game engine, is my custom 3D/2D game engine. In actuality, this is more of a "graphical template" for OpenGL projects than a typical GUI-based game engine like Unity or Unreal. The aim here, is more for this to be a tool that assists developers in making games with maximum customisability and flexibility. It is quite literally "bare-bones".</p>
@@ -97,32 +97,32 @@
                 <h5>Blender Addon</h5>
                 The engine, works with <a href="https://www.blender.org/">Blender</a> in the form of a handy export addon. This tool allows you to create full environments (.env format) that can be efficiently loaded into your scene as well as static objects (.obj format) and animated objects (.aho format). Using this addon, stored animations can be reloaded onto your laoded model and edited as well as deleted from the file's data.
                 <h5>AHOs and ENVs</h5>
-                You may be quite confused at this point to see ".aho" and ".env" appear in the above paragraph. These have been created as a simple workaround to the ultra-simplicity of <b>Bare Bones</b>. Animated Hierarchical Object (.aho) files are essentially modified .obj files with an additional section for hierarchical relationship information at the start and appended <i>n</i> number of animation data appended at the end describing just positional data at recorded keyframes. <i>Bare Bones</i> then handles the parsing and interpolation. Secondly, .env files essentially describe the arrangement of .objs or .ahos in a particular environment. These files are typically very small as they just provide the simple positional data for pre-exported model files. <i>Bare Bones</i> then handles the parsing and positioning.
+                You may be quite confused at this point to see ".aho" and ".env" appear in the above paragraph. These have been created as a simple workaround to the ultra-simplicity of <b>Bare Bones</b>. Animated Hierarchical Object (.aho) files are essentially modified .obj files with an additional section for hierarchical relationship information at the start and appended <i>n</i> number of animation data appended at the end describing just positional data at recorded keyframes. <i>Bare Bones</i> then handles the parsing and interpolation. Secondly, .env files essentially describe the arrangement of .objs or .ahos in a particular environment. These files are typically very small as they just provide the simple positional data for pre-exported model files. <i>Bare Bones</i> then handles the parsing and application of transformations.
+            </div>
+            <div id="engine_images_container">
+                <img id="engine_logo" src="images/barebones_logo.png">
             </div>
         </section>
         <!-- Music -->
         <section class="info_page" id="music_page">
-
+            coming soon...
         </section>
         <!-- Artwork -->
          <section class="info_page" id="portfolio_page">
-
+            coming soon...
         </section>
         <!-- About -->
         <section class="info_page" id="about_page">
-            <div class="content">
+            <div id="about_desc_container">
                 <h1>About the developer</h1>
                 <p>My name is Adam Handschuh. I'm a game developer, musician and founder of Hidden Palm Interactive; a game studio based in Dublin, Ireland and started in 2020.</p>
                 <p>I'm currently 23 and have a degree in Computer Science and Linguistics from Trinity College Dublin. As well as making games, I am currently working full-time as a professional 3D visual artist.</p>
                 <p>These games aim to tell interesting stories across unique worlds, mainly falling within the genre of puzzle-adventure. Currently I have just my debut release: <b>Vorago</b> on both <a href="https://store.steampowered.com/app/3044970/Vorago/">Steam</a> and <a href="https://hidden-palm-interactive.itch.io/vorago">Itch.io.</a></p>
                 <p>My debut <b>Vorago</b> is a puzzle-adventure horror game and was developed over the course of 4 years, exclusively using the <a href="https://processing.org/"><i>Processing</i></a> IDE.</p>
                 <p>Currently, I'm developing my second game <b>Venki</b> which is being created using my own custom 3D game engine, built from the ground up. This is expected to release in 2027.</p>
-                <!-- <img id="portrait" src="images/portrait.png" width="400px" height="400px"> -->
             </div>
+            <img id="portrait" src="images/portrait.png" width="400px" height="400px">
         </section>
     </div>
-    <!--Footer Bar-->
-    <span id="footer_container">
-    </span>
 </body>
 </html>

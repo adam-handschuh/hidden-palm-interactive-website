@@ -1,22 +1,15 @@
 body {
     font-size: 100%;
-    overflow-y: hidden;
-    overflow-x: hidden;
     background-color: rgb(0, 0, 0);
     text-align: center;
     cursor:grab;
-    scrollbar-width: none;
+    scrollbar-color: green;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 a{
     text-decoration: none;
     color: rgb(255, 76, 240);
-}
-
-video{
-    width: inherit;
-    height: inherit;
 }
 
 
@@ -91,10 +84,12 @@ video{
     margin: 40px;
     padding: 40px;
     height: 60%;
-
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.4s ease;
+
+    display: flex;
+    align-items:baseline;
 }
 
 .info_page.show{
@@ -103,29 +98,36 @@ video{
     color: white;
 }
 
-#engine_page{
-    max-width: 1000px;
-}
-
 .games_panel{
     z-index: 10;
 }
 
+#game_gallery_container{
+    margin-top: 4%;
+    display: inline-block;
+    position: fixed;
+    width: 50%;
+    height: 70%;
+    text-align: center;
+    left: 0;
+}
+
 .game_gallery{
-    width: 640px;
-    height: 400px;
-    left: 0%;
+    display: inline-block;
+    width: 74%;
+    height: auto;
     border-style: groove;
-    text-align: left;
-    float: inline-start;
     background-color: black;
 }
 
-
 .game_teaser{
-    width: 640px;
-    height: 400px;
-    position: fixed;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.video_trailer{
+    display: block;
 }
 
 #screenshot{
@@ -133,31 +135,52 @@ video{
 }
 
 #fade_box{
+    width: auto;
+    height: auto;
     opacity: 0;
-    background-color: black;
-    width: 640px;
-    height: 400px;
+    background-color: rgb(0, 0, 0, 0);
+    transition: opacity 0.5s linear;
+}
+
+.game_desc_container{
+    background-color: rgba(0,0,0,.8);
+    display: inline-block;
     position: fixed;
-    transition: opacity 0.5s ease;
-}
-
-.game_description{
-    background-color: rgba(0,0,0,.8);
-    border-width: 10px;
+    right: 10%;
+    width: 45%;
+    height: 60%;
     text-align: left;
-    margin-left: 800px;
-    margin-top: -50px;
-}
-
-.content{
     max-width: 550px;
-    padding: 1%;
     overflow-y: scroll;
-    background-color: rgba(0,0,0,.8);
+    padding-right: 30px;
 }
 
-#engine_page{
+
+#engine_content_container{
     overflow-y: scroll;
+    position: fixed;
+    display: inline-block;
+    width: 40%;
+    height: 60%;
+    margin-right: 10px;
+    background-color: rgba(0,0,0,.8);
+    text-align: left;
+    max-width: 550px;
+    padding: 30px;
+}
+
+#engine_images_container{
+    position: fixed;
+    display: inline-block;
+    right: 10%;
+    width: 30%;
+    height: 60%;
+    text-align: right;
+}
+
+#engine_logo{
+    width: 90%;
+    height: auto;
 }
 
 .purchase_button{
@@ -193,9 +216,8 @@ video{
 }
 
 .selector{
+    display: inline-block;
     position: relative;
-    margin-top: 450px;
-    margin-left: 150px;
 }
 
 .selector_overlay{
@@ -259,13 +281,20 @@ video{
 
 #portrait{
     position: fixed;
-    right: 400px;
+    right: 20%;
 
-    top: 250px;
+    width: 25%;
+    height: auto;
+    text-align: center;
 
-    border-radius: 100px;
-    border-style: outset;
+    border-radius: 100%;
+    border-style: dashed;
     border-color: white;
+}
+
+#about_desc_container{
+    overflow-y: scroll;
+    max-width: 40%;
 }
 
 #footer_container{
@@ -280,11 +309,13 @@ video{
 }
 
 #stars_container{
+    overflow-y: hidden;
+    overflow-x: hidden;
     z-index: 0;
     background-color: rgb(0, 0, 0);
-    position:relative;
+    position:fixed;
     left:0;
-    top: 0;
+    top: -10%;
     width: 100%;
     height: 100%
 }

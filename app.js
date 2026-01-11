@@ -22,6 +22,7 @@ buttons.forEach(button => {
 
 const selector_buttons = document.querySelectorAll(".select_button");
 const selector_underlay = document.getElementById("selector_underlay");
+const trailer = document.getElementById("video_trailer");
 const screenshot = document.getElementById("screenshot");
 const fade_box = document.getElementById("fade_box");
 
@@ -35,9 +36,13 @@ selector_buttons.forEach(sButton =>{
     reset_animation(fade_box);
     fade_box.style.animation = "fade-in .5s linear 1";
     if(sButton.id != "_1"){
+      trailer.style.display = "none";
       screenshot.style.display = "block";
       screenshot.src = "images/screenshot" + sButton.id + ".jpg";
+      trailer.pause();
     }else{
+      trailer.play();
+      trailer.style.display = "block";
       screenshot.style.display = "none";
     }
     fade_box.style.animation = "fade-out .5s linear 1";

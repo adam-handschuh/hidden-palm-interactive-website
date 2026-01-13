@@ -15,8 +15,8 @@
     <!--Header Bar-->
     <div id="header_container">
         <div id="logo">
-            <img src="images/logo_hand.png" alt="Hidden Palm Interactive" width="75" height="75">
-            <img src="images/logo_text.png" alt="Hidden Palm Interactive" width="200" height="75">
+            <img id="logo_image" src="images/logo_hand.png" alt="Hidden Palm Interactive">
+            <img id="logo_text" src="images/logo_text.png" alt="Hidden Palm Interactive">
         </div>
         <br>
         <div class="header_button" id="home_button" data-target="home_page"><img class="header_icon" src="images/home_icon.png"> <div class="header_button_text">Home</div></div>
@@ -66,16 +66,19 @@
                     <div class="selector">
                         <!-- Selector Bar parts -->
                         <div class="selector_underlay" id="selector_underlay"></div>
-                        <img class="selector_overlay" src="images/selector_layer_1.png">
-                        <img class="selector_overlay" src="images/selector_layer_2.png">
-                        <button class="select_button" id="_1">click</button>
-                        <button class="select_button" id="_2">click</button>
-                        <button class="select_button" id="_3">click</button>
-                        <button class="select_button" id="_4">click</button>
-                        <button class="select_button" id="_5">click</button>
+                        <div class="selector_overlay">
+                            <img src="images/selector_layer_1.png" style="position: fixed; width: inherit; height: auto;">
+                            <img src="images/selector_layer_2.png" style="position: fixed; width: inherit; height: auto;">
+                        </div>
+                        <div id="select_button_container">
+                            <button class="select_button" id="_1">click</button>
+                            <button class="select_button" id="_2">click</button>
+                            <button class="select_button" id="_3">click</button>
+                            <button class="select_button" id="_4">click</button>
+                            <button class="select_button" id="_5">click</button>
+                        </div>
                     </div>
                 </div>
-                <br>
                 <div class="game_desc_container">
                     <h1>VORAGO</h1>
                     <h4 style="color: gray;">July 2024</h4>
@@ -84,8 +87,8 @@
                     <h3>Story</h3>
                     <p>You play as AL-1, an android asigned to a research station deep in the "Oracle Fields"; a distant, obscure pocket in the void of space. The mysterious "Time Event" has occured and all crew have disappeared, leaving behind them only a faint trail of existence. What happened? It's up to you to search for answers.</p>
                     <br>
-                    <a class="purchase_button" id="steam" href="https://store.steampowered.com/app/3044970/Vorago/">Buy on <b>STEAM</b> <img src="images/steam_logo.png" width="20px" height="20px" style="margin-bottom: -3px;"> | €4.99</a>
-                    <a class="purchase_button" id="itch" href="https://hidden-palm-interactive.itch.io/vorago">Buy on <b>ITCH.IO</b> <img src="images/itch_logo.webp" width="20px" height="20px" style="margin-bottom: -3px;"> | €4.99</a>
+                    <a class="purchase_button" id="steam" href="https://store.steampowered.com/app/3044970/Vorago/">Buy on <b>STEAM</b> | €4.99</a>
+                    <a class="purchase_button" id="itch" href="https://hidden-palm-interactive.itch.io/vorago">Buy on <b>ITCH.IO</b> | €4.99</a>
                 </div>
             </div>
         </section>

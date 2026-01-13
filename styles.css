@@ -1,10 +1,12 @@
+/* Uniform styles */
 body {
-    font-size: 100%;
+    font-size: 0.8vw;
     background-color: rgb(0, 0, 0);
     text-align: center;
     cursor:grab;
     scrollbar-color: green;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: wrap;
 }
 
 a{
@@ -12,7 +14,7 @@ a{
     color: rgb(255, 76, 240);
 }
 
-
+/* Headerbar and page icons */
 #header_container{
     z-index: 999;
     position: fixed;
@@ -30,8 +32,16 @@ a{
     display: inline-block;
     border-bottom-style: groove;
     border-color: rgb(53, 53, 53);
-    align-items: center;
-    align-content: center;
+}
+
+#logo_image{
+    width: 7%;
+    height: auto;
+}
+
+#logo_text{
+    width: 20%;
+    height: auto;
 }
 
 .header_button{
@@ -39,14 +49,15 @@ a{
     color: white;
     display: inline-block;
     text-align: center;
-    padding: 3px;
-    margin: 20px 40px;
+    padding: .5%;
+    margin: 1% 2%;
+    width: 5%;
+    height: 5%;
 }
 
 .header_button.active{
     color:rgb(0, 255, 0);
     text-shadow: 100px;
-    font-weight: 1000;
 }
 
 .header_button.active:hover{
@@ -60,25 +71,28 @@ a{
 
 .header_icon{
     text-align: center;
-    width: 40px;
-    height: 40px;
+    width: 40%;
+    height: auto;
     transition: width 0.5s ease, height 0.5s ease;
 }
 
 .header_button:hover .header_icon{
     color:green;
     text-align: center;
-    width: 70px;
-    height: 70px;
+    width: 70%;
+    height: auto;
     transition: width 0.5s ease, height 0.5s ease;
 }
 
+/* Main content pages */
+
+/* GENERAL */
 .info_page{
     position: fixed;
-    top: 20%;
+    top: 10%;
     text-align: left;
-    margin: 40px;
-    padding: 40px;
+    margin: 5%;
+    padding: 5%;
     height: 60%;
     opacity: 0;
     visibility: hidden;
@@ -94,6 +108,7 @@ a{
     color: white;
 }
 
+/* GAMES */
 .games_panel{
     z-index: 10;
 }
@@ -103,13 +118,13 @@ a{
     display: inline-block;
     position: fixed;
     width: 50%;
-    height: 70%;
+    height: 100%;
     text-align: center;
-    left: 0;
+    left: 10%;
 }
 
 .game_gallery{
-    display: inline-block;
+    display: block;
     width: 74%;
     height: auto;
     border-style: groove;
@@ -139,11 +154,85 @@ a{
     transition: opacity 2s linear;
 }
 
+.selector{
+    display: block;
+    position: relative;
+    margin-top: 1%;
+    height: 100%;
+    width: 70%;
+    left: 17%;
+}
+
+
+#select_button_container{
+    position: fixed;
+    text-align: left;
+    width: 30%;
+    height: 80%;
+}
+
+.select_button{
+    position: relative;
+    display: inline-block;
+    margin-right: 3.5%;
+    margin-top: 3%;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    width: 10%;
+    height: 10%;
+}
+
+.select_button:hover{
+    cursor: pointer;
+}
+
+.selector_overlay{
+    position: fixed;
+    width: 20%;
+    text-align: left;
+}
+
+.selector_underlay{
+    position: fixed;
+    background-color: white;
+    box-shadow: 0px 0px white;
+    margin-top: 1%;
+    width: 2.7%;
+    height: 6%;
+    text-align: center;
+}
+
+.selector_underlay._1{
+    margin-left: 0%;
+    transition: margin-left 0.5s ease;
+}
+
+.selector_underlay._2{
+    margin-left: 4.3%;
+    transition: margin-left 0.5s ease;
+}
+
+.selector_underlay._3{
+    margin-left: 8.6%;
+    transition: margin-left 0.5s ease;
+}
+
+.selector_underlay._4{
+    margin-left: 12.9%;
+    transition: margin-left 0.5s ease;
+}
+
+.selector_underlay._5{
+    margin-left: 17.3%;
+    transition: margin-left 0.5s ease;
+}
+
 .game_desc_container{
     background-color: rgba(0,0,0,.8);
     display: inline-block;
     position: fixed;
-    right: 10%;
+    left: 60%;
     width: 45%;
     height: 60%;
     text-align: left;
@@ -151,8 +240,44 @@ a{
     overflow-y: scroll;
     padding-right: 30px;
 }
+.purchase_button{
+    padding: 2% 5%;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    margin-right: 5%;
+    border-radius: 20px;
+}
 
+.purchase_logo{
+    position: fixed;
+    width: 5px;
+    height: 5px;
+}
 
+#steam{
+    background-color: rgb(180, 180, 255);
+    transition: background-color 0.5s ease;
+}
+
+#itch{
+    background-color: rgb(255, 180, 180);
+    transition: background-color 0.5s ease;
+}
+
+#steam:hover{
+    background-color: rgb(88, 91, 255);
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+#itch:hover{
+    background-color: rgb(255, 82, 82);
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+/* ENGINE */
 #engine_content_container{
     overflow-y: scroll;
     position: fixed;
@@ -180,102 +305,8 @@ a{
     height: auto;
 }
 
-.purchase_button{
-    padding: 14px 25px;
-    text-align: center;
-    display: inline-block;
-    color: black;
-    margin-right: 20px;
-    border-radius: 20px;
-    font-size: medium;
-}
 
-#steam{
-    background-color: rgb(180, 180, 255);
-    transition: background-color 0.5s ease;
-}
-
-#itch{
-    background-color: rgb(255, 180, 180);
-    transition: background-color 0.5s ease;
-}
-
-#steam:hover{
-    background-color: rgb(88, 91, 255);
-    color: white;
-    transition: background-color 0.5s ease;
-}
-
-#itch:hover{
-    background-color: rgb(255, 82, 82);
-    color: white;
-    transition: background-color 0.5s ease;
-}
-
-.selector{
-    display: inline-block;
-    position: relative;
-}
-
-.selector_overlay{
-    position: fixed;
-    z-index: 50px;
-    width: 300px;
-    height: 73px;
-    text-align: center;
-}
-
-.select_button{
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
-    margin-right: 23px;
-    margin-left: 1px;
-    color: rgba(0, 0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
-    height: 30px;
-}
-
-.select_button:hover{
-    cursor: pointer;
-}
-
-.selector_underlay{
-    position: fixed;
-    background-color: white;
-    box-shadow: 0px 0px white;
-    margin-top: 15px;
-    margin-left: 0px;
-    width: 40px;
-    height: 45px;
-}
-
-.selector_underlay._1{
-    margin-left: 0px;
-    transition: margin-left 0.5s ease;
-}
-
-.selector_underlay._2{
-    margin-left: 65px;
-    transition: margin-left 0.5s ease;
-}
-
-.selector_underlay._3{
-    margin-left: 130px;
-    transition: margin-left 0.5s ease;
-}
-
-.selector_underlay._4{
-    margin-left: 195px;
-    transition: margin-left 0.5s ease;
-}
-
-.selector_underlay._5{
-    margin-left: 260px;
-    transition: margin-left 0.5s ease;
-}
-
+/* ABOUT */
 #portrait{
     position: fixed;
     right: 20%;
@@ -294,6 +325,7 @@ a{
     max-width: 40%;
 }
 
+/* Footer bar */
 #footer_container{
     position: fixed;
     left: 0;
@@ -305,6 +337,7 @@ a{
     background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
+/* Background and misc */
 #stars_container{
     overflow-y: hidden;
     overflow-x: hidden;
@@ -395,6 +428,7 @@ a{
     animation: shoot 97s linear infinite;
 }
 
+/* Animations */
 @keyframes shoot{
     0% {
         transform: translate(0px, 0px);

@@ -6,6 +6,8 @@
     <title>Hidden Palm Interactive</title>
     <link rel="stylesheet" href="styles.css"/>
     <script src="app.js" async></script>
+    <meta name="description" content="The official Hidden Palm Interactive website | Adam Handschuh">
+    <link rel="icon" href="/logo_hand.ico">
 </head>
 <body>
     <!--Header Bar-->
@@ -55,7 +57,9 @@
                             <source src="images/vorago_trailer.mp4" type="video/mp4">
                         </video>
                         <img class="game_teaser" id="screenshot" src="images/screenshot_1.jpg">
-                        <span id="fade_box"></span>
+                        <span id="fade_box">
+                            <img class="game_teaser" id="screenshot" src="images/screenshot_1.jpg">
+                        </span>
                     </div>
                     <div class="selector">
                         <!-- Selector Bar parts -->
@@ -88,16 +92,16 @@
             <div id="engine_content_container">
                 <h1><i><b>Bare Bones</b></i> engine</h1>
                 <h3>Overview</h3>
-                <p>The <i>Bare Bones</i> game engine, is my custom 3D/2D game engine. In actuality, this is more of a "graphical template" for OpenGL projects than a typical GUI-based game engine like Unity or Unreal. The aim here, is more for this to be a tool that assists developers in making games with maximum customisability and flexibility. It is quite literally "bare-bones".</p>
+                <p>The <b>Bare Bones</b> game engine, is my custom 3D/2D game engine. In actuality, this is more of a "graphical template" for OpenGL projects than a typical GUI-based game engine like Unity or Unreal. The aim here, is more for this to be a tool that assists developers in making games with maximum customisability and flexibility but with minimum "pre-work" already done for them. It is quite literally "bare-bones".</p>
                 <h3>Development</h3>
-                <p><i>Bare Bones</i> has its own custom maths, text-rendering and model/animation libraries (among many others!). How developement for a new project can be done with engine, is by simply creating a new main.cpp file and importing your desired libraries and putting something together. OpenGL can often be frustrating to set up, let alone needing to download and install countless libraries in order to make creative, visual works. This was developed as a way to provide an easy way to intuitively program a graphical, interactive project in C++. This tool is planned to be released publicly after the release of my second game.</p>
+                <p><b>Bare Bones</b> has its own custom maths, text-rendering and model/animation libraries (among many others!). Developement of a new project can be done using this tool by simply creating a new main.cpp file and importing your desired libraries and putting something together. OpenGL can often be frustrating to set up, let alone needing to download and install countless libraries in order to make creative, visual works. This was developed as a way to provide an easy way to intuitively program a graphical, interactive project in C++. <b>Bare Bones</b> is planned to be released publicly after the release of my second game.</p>
                 <h3>Features</h3>
                 <h5>PostPro</h5>
                 PostPro is a quick and easy-to-use library to add filters/effects to the screen as well as add drop-shadows at the drop of a hat (or the switch of a boolean). With a range of customisable effects, such as pixel-graphics, retro filters and more, PostPro can help create the perfect art-style for your project/game.
                 <h5>Blender Addon</h5>
                 The engine, works with <a href="https://www.blender.org/">Blender</a> in the form of a handy export addon. This tool allows you to create full environments (.env format) that can be efficiently loaded into your scene as well as static objects (.obj format) and animated objects (.aho format). Using this addon, stored animations can be reloaded onto your laoded model and edited as well as deleted from the file's data.
                 <h5>AHOs and ENVs</h5>
-                You may be quite confused at this point to see ".aho" and ".env" appear in the above paragraph. These have been created as a simple workaround to the ultra-simplicity of <b>Bare Bones</b>. Animated Hierarchical Object (.aho) files are essentially modified .obj files with an additional section for hierarchical relationship information at the start and appended <i>n</i> number of animation data appended at the end describing just positional data at recorded keyframes. <i>Bare Bones</i> then handles the parsing and interpolation. Secondly, .env files essentially describe the arrangement of .objs or .ahos in a particular environment. These files are typically very small as they just provide the simple positional data for pre-exported model files. <i>Bare Bones</i> then handles the parsing and application of transformations.
+                You may be quite confused at this point to see ".aho" and ".env" appear in the above paragraph. These have been created as a simple workaround to the ultra-simplicity of <b>Bare Bones</b>. Animated Hierarchical Object (.aho) files are essentially modified .obj files with an additional section for hierarchical relationship information at the start and appended <i>n</i> number of animation data appended at the end describing just positional data at recorded keyframes. <b>Bare Bones</b> then handles the parsing and interpolation. Secondly, .env files essentially describe the arrangement of .objs or .ahos in a particular environment. These files are typically very small as they just provide the simple positional data for pre-exported model files. <b>Bare Bones</b> then handles the parsing and application of transformations.
             </div>
             <div id="engine_images_container">
                 <img id="engine_logo" src="images/barebones_logo.png">

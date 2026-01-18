@@ -1,4 +1,5 @@
 /* Uniform styles */
+
 body {
     font-size: 0.8vmax;
     background-color: rgb(0, 0, 0);
@@ -13,6 +14,19 @@ a{
     color: rgb(255, 76, 240);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* Grid */
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'header_container'
+    'info_page'
+    'footer_container';
+}
+
 /* Headerbar and page icons */
 #header_container{
     z-index: 999;
@@ -21,11 +35,11 @@ a{
     top: 0;
     display: inline-block;
     border-color: rgb(53, 53, 53);
-    background-image: linear-gradient(to bottom, rgb(10, 10, 10) 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
     background-repeat: no-repeat;
 
     width: 100%;
-    height: 40%;
+    height: 23%;
 }
 
 #header_bar_container{
@@ -34,7 +48,6 @@ a{
 
 #logo{
     display: inline-block;
-    border-bottom-style: groove;
     border-color: rgb(53, 53, 53);
 }
 
@@ -53,9 +66,10 @@ a{
     color: white;
     display: inline-block;
     text-align: center;
-    padding: .5%;
-    width: 5%;
+    padding:1%;
+    width: 8%;
     height: 20%;
+    transition: width 0.5s ease, height 0.5s ease;
 }
 
 .header_button.active{
@@ -75,18 +89,16 @@ a{
     width: 40%;
     height: auto;
     padding-bottom: 1%;
-    transition: width 0.5s ease, height 0.5s ease;
 }
 
 .header_button_text{
     display: block;
 }
 
-.header_button:hover .header_icon{
+.header_button:hover{
     color:green;
     text-align: center;
-    width: 70%;
-    height: auto;
+    width: 10%;
     transition: width 0.5s ease, height 0.5s ease;
 }
 
@@ -95,10 +107,10 @@ a{
 /* GENERAL */
 .info_page{
     position: fixed;
-    top: 10%;
+    top: 25%;
     text-align: left;
-    margin: 5%;
-    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     height: 60%;
     opacity: 0;
     visibility: hidden;
@@ -114,14 +126,55 @@ a{
     color: white;
 }
 
+/* HOME */
+#home_page{
+    width: 80%;
+    height: 80%;
+    display: block;
+}
+
+#home_container{
+    position: relative;
+    display: block;
+    width: 30%;
+    height: 25%;
+    margin-right: 5%;
+    border-right: 1px;
+    padding-right: 2%;
+}
+
+/* BLOGS */
+#blog_container{
+    position: relative;
+    display: block;
+    width: 30%;
+    height: 50%;
+}
+
+#blog_header{
+    position: relative;
+    display: inline-flexbox;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    height: 50%;
+}
+
+#blog_list{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
 /* GAMES */
 #game_gallery_container{
     display: inline-block;
     position: relative;
-    width: 50%;
-    height: 100%;
+    width: 45vmax;
+    height: 100vmin;
     text-align: center;
-    top: 0;
+    margin-top: 3%;
 }
 
 .game_gallery{
@@ -138,8 +191,13 @@ a{
     height: 100%;
 }
 
-.video_trailer{
+#video_trailer{
     display: block;
+    position: relative;
+}
+
+#video_trailer:hover{
+    cursor: pointer;
 }
 
 #screenshot{
@@ -147,60 +205,76 @@ a{
 }
 
 #fade_box{
-    box-shadow: 0px 0px black;
+    top: 0;
+    margin-top: 1%;
+    position: absolute;
+    display: none;
     width: 100%;
-    height: 100%;
+    height: 96%;
+    background-color: black;
     opacity: 0;
-    transition: opacity 2s linear;
+    transition: opacity .5s linear;
 }
 
 .selector{
     display: block;
     position: relative;
     margin-top: 1%;
-    height: 30%;
-    width: 50%;
+    width: 54%;
+    height: 9.2vmin;
     left: 25%;
+    background-color: black;
 }
 
 
 #select_button_container{
-    position: fixed;
+    /* background-color: red; */
+    position: absolute;
     text-align: left;
-    width: 30%;
-    height: 10%;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
 }
 
 .select_button{
     position: relative;
     display: inline-block;
-    margin-right: 3.5%;
-    margin-top: 3%;
     color: rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0);
-    width: 10%;
-    height: 50%;
+    width: 17%;
+    height: 100%;
+    margin-top: 10%;
+    translate: -50% -50%;
+    margin-left: 4%;
 }
+
+.select_button:first{
+ margin-left: 0%;
+}
+
 
 .select_button:hover{
     cursor: pointer;
 }
 
 .selector_overlay{
-    position: fixed;
-    width: 20%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     text-align: left;
 }
 
 .selector_underlay{
-    position: fixed;
-    background-color: white;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px white;
-    margin-top: 1%;
-    width: 2.7%;
-    height: 6%;
+    width: 11.8%;
+    height: 100%;
+    left: 6%;
     text-align: center;
+    top: 70%;
+    translate: -50% -51%;
 }
 
 .selector_underlay._1{
@@ -209,22 +283,22 @@ a{
 }
 
 .selector_underlay._2{
-    margin-left: 4.3%;
+    margin-left: 22%;
     transition: margin-left 0.5s ease;
 }
 
 .selector_underlay._3{
-    margin-left: 8.6%;
+    margin-left: 44%;
     transition: margin-left 0.5s ease;
 }
 
 .selector_underlay._4{
-    margin-left: 13%;
+    margin-left: 66%;
     transition: margin-left 0.5s ease;
 }
 
 .selector_underlay._5{
-    margin-left: 17.3%;
+    margin-left: 88%;
     transition: margin-left 0.5s ease;
 }
 
@@ -235,24 +309,31 @@ a{
     width: 45%;
     height: 60%;
     text-align: left;
-    max-width: 550px;
+    max-width: 30%;
     overflow-y: scroll;
     padding-right: 2%;
     margin-left: 10%;
 }
+
+.purchase_section{
+    text-align: center;
+    font-size: 1vmax;
+}
+
 .purchase_button{
+    position: relative;
     padding: 2% 5%;
     text-align: center;
     display: inline-block;
     color: black;
-    margin-right: 5%;
-    border-radius: 20px;
+    margin-bottom: 2px;
+    max-width: 45%;
 }
 
 .purchase_logo{
-    position: fixed;
-    width: 5px;
-    height: 5px;
+    width: 13%;
+    height: auto;
+    translate: 0% 15%;
 }
 
 #steam{
@@ -314,10 +395,7 @@ a{
     width: 25%;
     height: auto;
     text-align: center;
-
     border-radius: 100%;
-    border-style: dashed;
-    border-color: white;
 }
 
 #about_desc_container{
@@ -332,22 +410,20 @@ a{
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 10%;
-    z-index: 999;
-    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    height: 5%;
 }
 
 /* Background and misc */
 #stars_container{
     overflow-y: hidden;
     overflow-x: hidden;
-    z-index: 0;
+    z-index: 0px;
     background-color: rgb(0, 0, 0);
     position:fixed;
     left:0;
     top: -10%;
     width: 100%;
-    height: 100%
+    height: 105%
 }
 
 #stars{
@@ -461,5 +537,46 @@ a{
     }
     100% {
         opacity: 0;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    body{font-size: 2vmax;}
+    #logo_image{width: 15%;}
+    #logo_text{width: 45%;}
+
+    .header_button{width: 15%; padding: 3%;}
+    .header_button:hover{width: 17%;}
+    .header_icon{width: 100%;}
+    .header_container{height: 20%;}
+
+    .info_page{top: 27%; overflow-y: auto; margin: 0; height: 70%;}
+    
+    #home_container{width: 100%; margin-bottom: 20%;}
+
+
+    #game_gallery_container{display: block; width: 95%; height: 100%; margin-bottom: 5%; margin-top: 8%;}
+    
+    .game_desc_container{display: block; position: relative; max-width: 90%; width: 100%; height: 90%; margin: 2%;}
+    .purchase_section{font-size: 2.1vmax;}
+    .purchase_button{margin-right: 0.5%;}
+
+    #engine_content_container{
+        width: 100%;
+    }
+    #engine_images_container{
+        position: relative;
+        right: 100%;
+    }
+    
+    #about_desc_container{
+        max-width: 60%;
+        margin-top: 5%;
+    }
+    #portrait{
+        width: 30%;
+        right: 5%;
+        margin-top: 10%;
+        text-align: right;
     }
 }

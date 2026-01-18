@@ -38,16 +38,19 @@ selector_buttons.forEach(sButton =>{
     if(sButton.id != "_1"){
       trailer.style.display = "none";
       screenshot.style.display = "block";
-      screenshot.src = "images/screenshot" + sButton.id + ".jpg";
+      screenshot.src = "images/screenshot" + sButton.id + ".png";
       trailer.pause();
+      fade_box.style.display = "block";
     }else{
       trailer.play();
       trailer.style.display = "block";
       screenshot.style.display = "none";
+      fade_box.style.display = "none";
     }
     fade_box.style.animation = "fade-out .5s linear 1";
   });
 });
+
 
 function reset_animation(element) {
   element.style.animation = 'none';

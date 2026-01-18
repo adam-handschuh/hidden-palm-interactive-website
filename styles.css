@@ -29,7 +29,7 @@ a{
 
 /* Headerbar and page icons */
 #header_container{
-    z-index: 999;
+    z-index: 999999;
     position: fixed;
     left: 0;
     top: 0;
@@ -44,6 +44,7 @@ a{
 
 #header_bar_container{
     display: flexbox;
+    background-color: black;
 }
 
 #logo{

@@ -1,3 +1,4 @@
+// Set up info-page buttons
 const buttons = document.querySelectorAll(".header_button");
 const pages = document.querySelectorAll(".info_page");
 
@@ -20,6 +21,7 @@ buttons.forEach(button => {
 });
 
 
+// Set up games-gallery
 const selector_buttons = document.querySelectorAll(".select_button");
 const selector_underlay = document.getElementById("selector_underlay");
 const trailer = document.getElementById("video_trailer");
@@ -51,9 +53,41 @@ selector_buttons.forEach(sButton =>{
   });
 });
 
-
+// Function to trigger reset animation
 function reset_animation(element) {
   element.style.animation = 'none';
   element.offsetHeight;
   element.style.animation = null; 
 }
+
+
+// Load blogs
+function loadBlog(blog_name){
+  fetch("/blogs/blogs_" + blog_name + ".html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("blog_content").innerHTML = html;
+  });
+}
+
+// Blog selection
+const blog_buttons = document.querySelectorAll(".blog_button");
+const blog_content = document.getElementById("blog_content");
+
+blog_buttons.forEach(blog_button =>{
+  blog_button.addEventListener("click",() =>{
+    loadBlog(blog_button.id);
+  });
+});
+
+
+
+function setup(){
+  loadBlog("welcome");
+  document.getElementById("home_page").classList.add("show");
+  document.getElementById("home_button").classList.add("active");
+}
+
+
+window.onload = setup;
+

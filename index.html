@@ -4,11 +4,11 @@
     <title>Hidden Palm Interactive</title>    
     
     <link rel="icon" href="/logo_hand.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" defer>
     <link rel="import" href="/blogs/blogs.html" />
     
-    <script src="app.js" async></script>
-    
+    <script src="/app.js" async></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta name="description" content="The official Hidden Palm Interactive website | Adam Handschuh">
@@ -20,36 +20,34 @@
     <meta name="verify-v1" content="pcNSAaFMHimKefBqLOXQuZsoTulbuyEw4ArdxyEcjsU">
 </head>
 <body>
-    <!-- GRID -->
-    <div class="grid-container">
-        <!--Header Bar-->
-        <div id="header_container">
-            <div id="logo">
-                <img id="logo_image" src="images/logo_hand.png" alt="Hidden Palm Interactive">
-                <img id="logo_text" src="images/logo_text.png" alt="Hidden Palm Interactive">
-            </div>
-            <div id="header_bar_container">
-                <div class="header_button" id="home_button" data-target="home_page"><img class="header_icon" src="images/home_icon.png"> <div class="header_button_text">Home</div></div>
-                <div class="header_button" id="vorago_button" data-target="games_page"><img class="header_icon" src="images/games_icon.png"> <div class="header_button_text">Games</div></div>
-                <div class="header_button" id="engine_button" data-target="engine_page"><img class="header_icon" src="images/engine_icon.png"> <div class="header_button_text">Engine</div></div>
-                <div class="header_button" id="music_button" data-target="music_page"><img class="header_icon" src="images/music_icon.png"> <div class="header_button_text">Music</div></div>
-                <div class="header_button" id="portfolio_button" data-target="portfolio_page"><img class="header_icon" src="images/artwork_icon.png"> <div class="header_button_text">Artwork</div></div>
-                <div class="header_button" id="about_button" data-target="about_page"><img class="header_icon" src="images/about_icon.png"> <div class="header_button_text">About</div></div>
-            </div>
+    <!--Header Bar-->
+    <div id="header_container">
+        <div id="logo">
+            <img id="logo_image" src="images/logo_hand.png" alt="Hidden Palm Interactive">
+            <img id="logo_text" src="images/logo_text.png" alt="Hidden Palm Interactive">
         </div>
-        <!--Main Page-->
-        <div id="main_container">
-            <!--Stars Canvas-->
-            <div id="stars_container">
-                <span id="stars"></span>
-                <span id="stars_offset_1"></span>
-                <span id="stars_offset_2"></span>
-            </div>
+        <div id="header_bar_container">
+            <div class="header_button" id="home_button" data-target="home_page"><img class="header_icon" src="images/home_icon.png"> <div class="header_button_text">Home</div></div>
+            <div class="header_button" id="vorago_button" data-target="games_page"><img class="header_icon" src="images/games_icon.png"> <div class="header_button_text">Games</div></div>
+            <div class="header_button" id="engine_button" data-target="engine_page"><img class="header_icon" src="images/engine_icon.png"> <div class="header_button_text">Engine</div></div>
+            <div class="header_button" id="music_button" data-target="music_page"><img class="header_icon" src="images/music_icon.png"> <div class="header_button_text">Music</div></div>
+            <div class="header_button" id="portfolio_button" data-target="portfolio_page"><img class="header_icon" src="images/artwork_icon.png"> <div class="header_button_text">Artwork</div></div>
+            <div class="header_button" id="about_button" data-target="about_page"><img class="header_icon" src="images/about_icon.png"> <div class="header_button_text">About</div></div>
+        </div>
+    </div>
+    <!--Main Page-->
+    <div id="main_container">
+        <!--Stars Canvas-->
+        <div id="stars_container">
+            <span id="stars"></span>
+            <span id="stars_offset_1"></span>
+            <span id="stars_offset_2"></span>
+        </div>
 
-            <!--Info Pages-->
-            <!-- Home -->
-            <section class="info_page" id="home_page">
-                <div id="home_container">
+        <!--Info Pages-->
+        <!-- Home -->
+        <section class="info_page" id="home_page">
+            <div id="home_container">
                 <div style="display: flex; align-items: center;">
                     <div style="display: flex;">
                         <h1>Home</h1>
@@ -59,106 +57,111 @@
                     </div>
                 </div>
                 <p>Welcome to the official <i>Hidden Palm Interactive</i> website. Feel free to browse through the different tabs above or check out this page for updates on developement progress and general activity.</p>
-                </div>
-                <div class="blog_container">
-                    <div id="blog_header" style="position: relative; display: flex; align-items: center;">
-                        <div style="display: flex;">
-                            <h1>Blogs</h1>
-                        </div>
-                        <div style="display: flex;">
-                            <img width="20%" height="20%" src="images/console_icon.png">
-                        </div>
+            </div>
+            <br>
+            <div id="blog_container">
+                <div id="blog_header" style="display: flex; align-items: center;">
+                    <div style="display: flex;">
+                        <h1>Blogs</h1>
                     </div>
-                    <div id="blog_list">
-                        <p id="blog_list_names">Coming Soon...</p>
-                        <!-- <iframe id="blog_file" src="/blogs/blogs.html"></iframe> -->
+                    <div style="display: flex;">
+                        <img width="20%" height="20%" src="images/console_icon.png">
                     </div>
                 </div>
-            </section>
-            <!-- Games -->
-            <section class="info_page" id="games_page">
-                <div class="games_panel" id="Vorago">
-                    <div id="game_gallery_container">
-                        <div class="game_gallery">
-                            <video class="game_teaser" id="video_trailer" controls>
-                                <source src="images/vorago_trailer.mp4" type="video/mp4">
-                            </video>
-                            <img class="game_teaser" id="screenshot" src="images/screenshot_2.png">
-                            <div id="fade_box"></div>
-                        </div>
-                        <span class="selector">
-                            <!-- Selector Bar parts -->
-                            <div class="selector_underlay" id="selector_underlay"></div>
-                            <div class="selector_overlay">
-                                <img src="images/selector_layer_1.png" style="position: absolute; width: 100%; height: auto;">
-                                <img src="images/selector_layer_2.png" style="position: absolute; width: 100%; height: auto;">
-                            </div>
-                            <div id="select_button_container">
-                                <button class="select_button" id="_1">click</button>
-                                <button class="select_button" id="_2">click</button>
-                                <button class="select_button" id="_3">click</button>
-                                <button class="select_button" id="_4">click</button>
-                                <button class="select_button" id="_5">click</button>
-                            </div>
-                        </span>
+                <div id="blog_list">
+                    <div id="blog_list_divider">↓ Latest ↓</div>
+                    Nothing here yet!
+                    <div id="blog_list_divider">↓ Older ↓</div>
+                    <button class="blog_button" id="welcome">"Welcome to blogs!"</button>
+                </div>
+            </div>
+            <div id="blog_content">
+                Error: blog content failed to load
+            </div>
+        </section>
+        <!-- Games -->
+        <section class="info_page" id="games_page">
+            <div class="games_panel" id="Vorago">
+                <div id="game_gallery_container">
+                    <div class="game_gallery">
+                        <video class="game_teaser" id="video_trailer" controls>
+                            <source src="images/vorago_trailer.mp4" type="video/mp4">
+                        </video>
+                        <img class="game_teaser" id="screenshot" src="images/screenshot_2.png">
+                        <div id="fade_box"></div>
                     </div>
-                    <div class="game_desc_container">
-                        <h1>VORAGO</h1>
-                        <h4 style="color: gray;">July 2024</h4>
-                        <h3>Gameplay</h3>
-                        <p>Vorago is a challenging puzzle-horror-adventure game set in space where you will alternate between flying your shuttle across the void and creeping along the narrow hallways of space stations, as you go from door to door, finding clues in your environment and within notes left by missing inhabitants. You'll need to outsmart a small collection of distinct entities in unique ways as you fight to survive aboard the desolate stations.</p>
-                        <h3>Story</h3>
-                        <p>You play as AL-1, an android assigned to a research station deep in the "Oracle Fields"; a distant, obscure pocket in the void of space. The mysterious "Time Event" has occurred and all crew have disappeared, leaving behind them only a faint trail of existence. What happened? It's up to you to search for answers.</p>
-                        <div class="purchase_section">
-                            <p>Current price: <b style="color: rgb(96, 226, 96);">€4.99</b></p>
-                            <a class="purchase_button" id="steam" href="https://store.steampowered.com/app/3044970/Vorago/">Buy on <b>STEAM</b> <span> <img class="purchase_logo" src="/images/steam_logo.png"> </span></a>
-                            <a class="purchase_button" id="itch" href="https://hidden-palm-interactive.itch.io/vorago">Buy on <b>ITCH.IO</b> <span> <img class="purchase_logo" src="/images/itch_logo.webp"> </span></a>
+                    <span class="selector">
+                        <!-- Selector Bar parts -->
+                        <div class="selector_underlay" id="selector_underlay"></div>
+                        <div class="selector_overlay">
+                            <img src="images/selector_layer_1.png" style="position: absolute; width: 100%; height: auto;">
+                            <img src="images/selector_layer_2.png" style="position: absolute; width: 100%; height: auto;">
                         </div>
+                        <div id="select_button_container">
+                            <button class="select_button" id="_1">click</button>
+                            <button class="select_button" id="_2">click</button>
+                            <button class="select_button" id="_3">click</button>
+                            <button class="select_button" id="_4">click</button>
+                            <button class="select_button" id="_5">click</button>
+                        </div>
+                    </span>
+                </div>
+                <div class="game_desc_container">
+                    <h1>VORAGO</h1>
+                    <h4 style="color: gray;">July 2024</h4>
+                    <h3>Gameplay</h3>
+                    <p>Vorago is a challenging puzzle-horror-adventure game set in space where you will alternate between flying your shuttle across the void and creeping along the narrow hallways of space stations, as you go from door to door, finding clues in your environment and within notes left by missing inhabitants. You'll need to outsmart a small collection of distinct entities in unique ways as you fight to survive aboard the desolate stations.</p>
+                    <h3>Story</h3>
+                    <p>You play as AL-1, an android assigned to a research station deep in the "Oracle Fields"; a distant, obscure pocket in the void of space. The mysterious "Time Event" has occurred and all crew have disappeared, leaving behind them only a faint trail of existence. What happened? It's up to you to search for answers.</p>
+                    <div class="purchase_section">
+                        <p>Current price: <b style="color: rgb(96, 226, 96);">€4.99</b></p>
+                        <a class="purchase_button" id="steam" href="https://store.steampowered.com/app/3044970/Vorago/">Buy on <b>STEAM</b> <span> <img class="purchase_logo" src="/images/steam_logo.png"> </span></a>
+                        <a class="purchase_button" id="itch" href="https://hidden-palm-interactive.itch.io/vorago">Buy on <b>ITCH.IO</b> <span> <img class="purchase_logo" src="/images/itch_logo.webp"> </span></a>
                     </div>
                 </div>
-            </section>
-            <!-- Engine -->
-            <section class="info_page" id="engine_page">
-                <div id="engine_content_container">
-                    <h1><i><b>Bare Bones</b></i> engine</h1>
-                    <h3>Overview</h3>
-                    <p>The <b>Bare Bones</b> game engine, is my custom 3D/2D game engine. In actuality, this is more of a "graphical template" for OpenGL projects than a typical GUI-based game engine like Unity or Unreal. The aim here, is more for this to be a tool that assists developers in making games with maximum customisability and flexibility but with minimum "pre-work" already done for them. It is quite literally "bare-bones".</p>
-                    <h3>Development</h3>
-                    <p><b>Bare Bones</b> has its own custom maths, text-rendering and model/animation libraries (among many others!). Development of a new project can be done using this tool by simply creating a new main.cpp file and importing your desired libraries and putting something together. OpenGL can often be frustrating to set up, let alone needing to download and install countless libraries in order to make creative, visual works. This was developed as a way to provide an easy way to intuitively programme a graphical, interactive project in C++. <b>Bare Bones</b> is planned to be released publicly after the completion of my second game.</p>
-                    <h3>Features</h3>
-                    <h5>PostPro</h5>
-                    PostPro is a quick and easy-to-use library to add filters/effects to the screen as well as add drop-shadows at the drop of a hat (or the switch of a boolean). With a range of customisable effects, such as pixel-graphics, retro filters and more, PostPro can help create the perfect art-style for your project/game.
-                    <h5>Blender Addon</h5>
-                    The engine works with <a href="https://www.blender.org/">Blender</a> in the form of a handy export addon. This tool allows you to create full environments (.env format) that can be efficiently loaded into your scene as well as static objects (.obj format) and animated objects (.aho format). Using this addon, stored animations can be reloaded onto your loaded model and edited as well as deleted from the file's data.
-                    <h5>AHOs and ENVs</h5>
-                    You may be quite confused at this point to see ".aho" and ".env" appear in the above paragraph. These have been created as a simple workaround to the ultra-simplicity of <b>Bare Bones</b>. Animated Hierarchical Object (.aho) files are essentially modified .obj files with an additional section for hierarchical relationship information at the start and appended <i>n</i> number of animation data appended at the end describing just positional data at recorded keyframes. <b>Bare Bones</b> then handles the parsing and interpolation. Secondly, .env files essentially describe the arrangement of .objs or .ahos in a particular environment. These files are typically very small as they just provide the simple positional data for pre-exported model files. <b>Bare Bones</b> then handles the parsing and application of transformations.
-                </div>
-                <div id="engine_images_container">
-                    <img id="engine_logo" src="images/barebones_logo.png">
-                </div>
-            </section>
-            <!-- Music -->
-            <section class="info_page" id="music_page">
-                coming soon...
-            </section>
-            <!-- Artwork -->
-             <section class="info_page" id="portfolio_page">
-                coming soon...
-            </section>
-            <!-- About -->
-            <section class="info_page" id="about_page">
-                <div id="about_desc_container">
-                    <h1>About the developer</h1>
-                    <p>My name is Adam Handschuh. I'm a game developer, musician and founder of Hidden Palm Interactive; a game studio based in Dublin, Ireland and started in 2020.</p>
-                    <p>I'm 23 and have a degree in Computer Science and Linguistics from Trinity College Dublin. As well as making games, I am currently working full-time as a professional 3D visual artist.</p>
-                    <p>These games aim to tell interesting stories across unique worlds, mainly falling within the genre of puzzle-adventure. At this point, I have just my debut release: <b>Vorago</b> on both <a href="https://store.steampowered.com/app/3044970/Vorago/">Steam</a> and <a href="https://hidden-palm-interactive.itch.io/vorago">Itch.io.</a></p>
-                    <p>My debut <b>Vorago</b> is a puzzle-adventure horror game and was developed over the course of 4 years, exclusively using the <a href="https://processing.org/"><i>Processing</i></a> IDE.</p>
-                    <p>Currently, I'm developing my second game <b>Venki</b> which is being created using my own custom 3D game engine, built from the ground up. This is expected to release in 2027.</p>
-                </div>
-                <img id="portrait" src="images/portrait.png" width="400px" height="400px">
-            </section>
-        </div>
-        <div id="footer_container"></div>
+            </div>
+        </section>
+        <!-- Engine -->
+        <section class="info_page" id="engine_page">
+            <div id="engine_content_container">
+                <h1><i><b>Bare Bones</b></i> engine</h1>
+                <h3>Overview</h3>
+                <p>The <b>Bare Bones</b> game engine, is my custom 3D/2D game engine. In actuality, this is more of a "graphical template" for OpenGL projects than a typical GUI-based game engine like Unity or Unreal. The aim here, is more for this to be a tool that assists developers in making games with maximum customisability and flexibility but with minimum "pre-work" already done for them. It is quite literally "bare-bones".</p>
+                <h3>Development</h3>
+                <p><b>Bare Bones</b> has its own custom maths, text-rendering and model/animation libraries (among many others!). Development of a new project can be done using this tool by simply creating a new main.cpp file and importing your desired libraries and putting something together. OpenGL can often be frustrating to set up, let alone needing to download and install countless libraries in order to make creative, visual works. This was developed as a way to provide an easy way to intuitively programme a graphical, interactive project in C++. <b>Bare Bones</b> is planned to be released publicly after the completion of my second game.</p>
+                <h3>Features</h3>
+                <h5>PostPro</h5>
+                PostPro is a quick and easy-to-use library to add filters/effects to the screen as well as add drop-shadows at the drop of a hat (or the switch of a boolean). With a range of customisable effects, such as pixel-graphics, retro filters and more, PostPro can help create the perfect art-style for your project/game.
+                <h5>Blender Addon</h5>
+                The engine works with <a href="https://www.blender.org/">Blender</a> in the form of a handy export addon. This tool allows you to create full environments (.env format) that can be efficiently loaded into your scene as well as static objects (.obj format) and animated objects (.aho format). Using this addon, stored animations can be reloaded onto your loaded model and edited as well as deleted from the file's data.
+                <h5>AHOs and ENVs</h5>
+                You may be quite confused at this point to see ".aho" and ".env" appear in the above paragraph. These have been created as a simple workaround to the ultra-simplicity of <b>Bare Bones</b>. Animated Hierarchical Object (.aho) files are essentially modified .obj files with an additional section for hierarchical relationship information at the start and appended <i>n</i> number of animation data appended at the end describing just positional data at recorded keyframes. <b>Bare Bones</b> then handles the parsing and interpolation. Secondly, .env files essentially describe the arrangement of .objs or .ahos in a particular environment. These files are typically very small as they just provide the simple positional data for pre-exported model files. <b>Bare Bones</b> then handles the parsing and application of transformations.
+            </div>
+            <div id="engine_images_container">
+                <img id="engine_logo" src="images/barebones_logo.png">
+            </div>
+        </section>
+        <!-- Music -->
+        <section class="info_page" id="music_page">
+            coming soon...
+        </section>
+        <!-- Artwork -->
+         <section class="info_page" id="portfolio_page">
+            coming soon...
+        </section>
+        <!-- About -->
+        <section class="info_page" id="about_page">
+            <div id="about_desc_container">
+                <h1>About the developer</h1>
+                <p>My name is Adam Oisín Handschuh. I'm a game developer, musician and founder of Hidden Palm Interactive; a game studio based in Dublin, Ireland and started in 2020.</p>
+                <p>I'm 23 and have a degree in Computer Science and Linguistics from Trinity College Dublin. As well as making games, I am currently working full-time as a professional 3D visual artist.</p>
+                <p>These games aim to tell interesting stories across unique worlds, mainly falling within the genre of puzzle-adventure. At this point, I have just my debut release: <b>Vorago</b> on both <a href="https://store.steampowered.com/app/3044970/Vorago/">Steam</a> and <a href="https://hidden-palm-interactive.itch.io/vorago">Itch.io.</a></p>
+                <p>My debut <b>Vorago</b> is a puzzle-adventure horror game and was developed over the course of 4 years, exclusively using the <a href="https://processing.org/"><i>Processing</i></a> IDE.</p>
+                <p>Currently, I'm developing my second game <b>Venki</b> which is being created using my own custom 3D game engine, built from the ground up. This is expected to release in 2027.</p>
+            </div>
+            <img id="portrait" src="images/portrait.png" width="400px" height="400px">
+        </section>
     </div>
+    <div id="footer_container"></div>
 </body>
 </html>

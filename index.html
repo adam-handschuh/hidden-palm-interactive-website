@@ -139,7 +139,7 @@
 					<h5>Blender Addon</h5>
 					The engine works with <a href="https://www.blender.org/">Blender</a> in the form of a handy export addon. This tool allows you to create full environments (.env format) that can be efficiently loaded into your scene as well as static objects (.obj format) and animated objects (.aho format). Using this addon, stored animations can be reloaded onto your loaded model and edited as well as deleted from the file's data.
 					<h5>AHOs and ENVs</h5>
-					You may be quite confused at this point to see ".aho" and ".env" appear in the above paragraph. These have been created as a simple workaround to the ultra-simplicity of <b>Bare Bones</b>. Animated Hierarchical Object (.aho) files are essentially modified .obj files with an additional section for hierarchical relationship information at the start and appended <i>n</i> number of animation data appended at the end describing just positional data at recorded keyframes. <b>Bare Bones</b> then handles the parsing and interpolation. Secondly, .env files essentially describe the arrangement of .objs or .ahos in a particular environment. These files are typically very small as they just provide the simple positional data for pre-exported model files. <b>Bare Bones</b> then handles the parsing and application of transformations.
+					You may be quite confused at this point to see ".aho" and ".env" appear in the above paragraph. These have been created as a simple workaround to the ultra-simplicity of <b>Bare Bones</b>. Animated Hierarchical Object (.aho) files are essentially modified .obj files with an additional section for hierarchical relationship information at the start and the data of <i>n</i> number of animations appended at the end describing positional data at recorded keyframes. <b>Bare Bones</b> then handles the parsing and interpolation. Secondly, .env files essentially describe the arrangement of .objs or .ahos in a particular environment. These files are typically very small as they just provide the simple positional data for pre-exported model files. <b>Bare Bones</b> then handles the parsing and application of transformations.
 				</div>
 				<div id="engine_images_container">
 					<img id="engine_logo" src="images/barebones_logo.png">
@@ -169,6 +169,7 @@
 		<div id="footer_container"></div>
 	</body>
 </html>
+
 
 
 
